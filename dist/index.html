@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>#log {
+        background: #1d1d1d;
+        color: white;
+        padding: 20px;
+        font-family: "Courier New", Courier, monospace;
+        min-height: 500px;
+        line-height: 30px;
+      }</style>
+
+    <title>BleuIO security example</title>
+  </head>
+  <body>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <button id="connect" class="btn btn-success">Connect</button>
+      <button id="deviceinfo" class="btn btn-success">Device Info</button>
+      <form id="form" action="#">
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Select device type</label>
+          <select class="form-select" id="deviceType" aria-label="Default select example">
+            <option value="Central">Central</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Select Connect Option</label>
+          <select class="form-select" id="connectionOption" aria-label="Default select example">
+            <option value="1">Connect with passkey</option>
+            <option value="2">Connect with Numeric Comparison</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Passkey </label>
+          <input type="text" class="form-control" id="passkey" aria-describedby="emailHelp" placeholder="Leave blank if you want to connect with Numberic Comparison">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">peripheral dongles mac address</label>
+          <input type="text" class="form-control" id="macaddress">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <br>
+      <br>
+
+      <div id="log"></div>
+    </div>
+    <br><br>
+    <script src="/bleuio-security.e31bb0bc.js"></script>
+  </body>
+</html>
